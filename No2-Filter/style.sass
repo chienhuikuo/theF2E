@@ -1,0 +1,384 @@
+//#RWD #flexbox
+$main-color: #9013FE
+$dark-color: #7828B4
+$light-gray: #D7D7D7
+$dark-gray: #9B9B9B 
+@mixin Font($size,$color,$weight,$lheight)
+  font-family: 'Roboto'
+  font-size: $size
+  color: $color
+  font-weight: $weight
+  line-height: $lheight
+// ---------------------- 
+*
+  box-sizing: border-box
+  font-family: 'Roboto'
+  transition: all .4s
+body
+  background: #F2F2F2 
+  overflow-x: hidden
+// ----------mobile------------- 
+.font-italic  
+  &:-ms-input-placeholder
+    color: #9B9B9B
+  &::-moz-placeholder
+    color: #9B9B9B
+  &:-moz-placeholder
+    color: #9B9B9B
+  &::-webkit-input-placeholder 
+    color: #9B9B9B
+.header
+  height: 69px
+  flex-direction: column
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 auto
+  &::after
+    content: ""
+    clear: both
+  .side
+    height: 69px
+    line-height: 85px
+    display: flex
+    justify-content: center
+    &::after
+      content: ""
+      clear: both
+  .main
+    display: none
+#logo
+  margin-left: 50%
+  transform: translateX(-50%)
+ 
+.mobile-searchbar
+  width: 100%
+  height: 55px
+  background-color: #EBEBEB
+  display: flex
+  align-items: center
+  justify-content: center
+  i
+    color: #000
+    font-size: 20px
+    transform: translate(25px,-5px)
+  input
+    width: 100%
+    border-style: none
+    border-bottom: 1px solid #000
+    background: transparent
+    +Font(20px,#fff,400,24px)
+    padding-bottom: 7px
+    padding-left: 45px
+.row
+  &::after
+    content: ""
+    clear: both
+    display: table
+.side
+  width: 100%
+.location,.date,.categories
+  background: $light-gray
+  border-bottom: 1px solid $dark-gray
+.plus
+  width: 25px
+  height: 25px
+  float: right
+  cursor: pointer
+  &:before
+    content: ""
+    width: 0
+    height: 18px
+    border: 1px solid #9B9B9B
+    display: inline-block
+    transform: translate(11px,3px)
+  &:after
+    content: ""
+    display: inline-block
+    width: 20px
+    height: 0
+    border: 1px solid #9B9B9B
+    transform: translateY(-5px)
+.minus
+  width: 25px
+  height: 25px
+  float: right
+  cursor: pointer
+  &:after
+    content: ""
+    display: inline-block
+    width: 20px
+    height: 0
+    border: 1px solid #9B9B9B
+    transform: translate(3px,-3px)
+.location
+  select
+    border: none
+    border-radius: 2px
+    margin-top: 15px
+    height: 40px
+    +Font(16px,#000,400,19px)
+    display: none
+.searchbar,.minus,.from,.to,.checkbox,.result_text
+  display: none
+.result_box
+  padding: 10px 40px //25-15=10
+.results
+  display: flex
+  flex-direction: column
+.photo
+  width: 100%
+.locate
+  margin-bottom: 8px
+.shadow 
+  -moz-box-shadow: inset 0 6px 30px $light-gray !important
+  -webkit-box-shadow: inset 0 6px 30px $light-gray !important
+  box-shadow: inset 0 6px 30px $light-gray !important
+[class*="col-"]  
+  float: left
+  padding: 15px
+@media only screen and (min-width: 768px) 
+  /*tablet*/
+  .font-italic  
+    &:-ms-input-placeholder
+      color: rgba(255,255,255,.5)
+    &::-moz-placeholder
+      color: rgba(255,255,255,.5)
+    &:-moz-placeholder
+      color: rgba(255,255,255,.5)
+    &::-webkit-input-placeholder 
+      color: rgba(255,255,255,.5)
+  .header
+    height: 92px
+    flex-direction: row
+    margin: 0 auto
+    justify-content: flex-start
+    flex-wrap: wrap
+    .side
+      line-height: 92px
+      display: block
+    .main
+      display: block
+  #logo
+    margin-left: 40px
+    transform: translateX(0)
+  .row
+    margin: 0 auto
+    justify-content: flex-start
+    flex-wrap: wrap
+  .side
+    flex: 0 0 300px
+    margin-right: 40px
+  .main
+    width: 52%
+  .mobile-searchbar,.plus,.minus
+    display: none
+  .searchbar,.from,.to,.checkbox,.result_text
+    display: block
+  .location,.date,.categories
+    background: #EBEBEB
+    border-bottom: 1px solid $light-gray
+  .location
+    select
+      display: block
+  .result_box
+    padding: 0
+  .photo
+    flex: 0 0 220px
+  .locate
+    margin-bottom: 0
+@media only screen and (min-width: 992px)   
+  /*desktop*/
+  .font-italic  
+    &:-ms-input-placeholder
+      color: rgba(255,255,255,.5)
+    &::-moz-placeholder
+      color: rgba(255,255,255,.5)
+    &:-moz-placeholder
+      color: rgba(255,255,255,.5)
+    &::-webkit-input-placeholder 
+      color: rgba(255,255,255,.5)
+  .header
+    height: 92px
+    flex-direction: row
+    margin: 0 auto
+    justify-content: center
+    flex-wrap: wrap
+    .side
+      line-height: 92px
+      display: block
+    .main
+      display: block
+  #logo
+    margin-left: 0
+    transform: translateX(0)
+  .row
+    margin: 0 auto
+    justify-content: center
+    flex-wrap: wrap
+  .side
+    flex: 0 0 300px !important
+    margin-right: 40px
+  .results
+    flex-direction: row
+  .photo
+    flex: 0 0 220px
+  .mobile-searchbar,.plus,.minus
+    display: none
+  .searchbar,.from,.to,.checkbox,.result_text
+    display: block
+  .location,.date,.categories
+    background: #EBEBEB
+    border-bottom: 1px solid $light-gray
+  .location
+    select
+      display: block
+  .result_box
+    padding: 0
+  .locate
+    margin-bottom: 0
+// ----------------------
+.header
+  align-items: center
+  width: 100%
+  background: $dark-color
+  .main
+    padding-bottom: 27px
+.searchbar
+  width: 388px
+  input
+    width: 100%
+    border-style: none
+    background: transparent
+    border-bottom: 1px solid #FFF
+    +Font(20px,#fff,400,24px)
+    padding-bottom: 7px
+    padding-left: 45px
+  i
+    color: #FFF
+    font-size: 20px
+    transform: translate(5px,25px)
+// --------side--------  
+.side
+  justify-content: flex-start
+  flex-direction: column
+  padding: 0
+.side_title
+  +Font(20px,#000,500,24px)
+.location,.date,.categories
+  width: 100% 
+  padding: 24px 40px
+.from
+  margin-bottom: 8px
+  margin-top: 24px
+.to
+  transform: translateX(19px)
+
+.select_date
+  display: inline-block
+  margin-left: 10px
+  input
+    border-style: none
+    padding: 11px 0 11px 11px
+.checkbox
+  margin-top: 24px
+.check_item
+  input
+    width: 16px
+    height: 16px
+    background: #FFF
+    border-radius: 2px
+    margin-right: 6px
+//-----------main------------
+.fa-times-circle
+  margin-left: 8px
+.fa-map-marker-alt,.fa-calendar-alt
+  margin-right: 8px
+.result_title
+  +Font(24px,#000,400,28px)
+  margin-bottom: 8px
+  margin-top: 9px
+  span
+    span
+      color: $main-color
+      font-weight: 500
+.result_tag
+  margin-bottom: 24px
+  div
+    +Font(16px,$main-color,400,19px)
+    font-style: italic
+    padding: 4px 16px
+    border: 1px solid $main-color
+    border-radius: 100px
+    display: inline-block
+    margin-right: 8px
+    cursor: pointer
+    i
+      transition: none
+    &:hover
+      background-color: $main-color
+      color: #FFF
+.results
+  margin-bottom: 24px
+  background: #FFF
+  box-shadow: 2px 5px 10px 0 #EBEBEB
+  &:hover
+    box-shadow: 5px 10px 20px 0 #d6d6d6
+.photo
+  height: auto
+  min-height: 220px
+  background: url("http://placekitten.com/g/700/400") center center no-repeat
+  
+.content
+  width: 100%
+  height: auto
+  padding: 24px 20px
+.content_title
+  +Font(24px,$main-color,500,36px)
+  margin-bottom: 16px
+.intro
+  line-height: 24px
+  width: 100%
+  height: 50px
+  overflow: hidden
+  font-weight: 400
+  margin-bottom: 13px
+.cont_tag
+  line-height: 19px
+  margin-bottom: 15px
+  span
+    +Font(16px,#000,500,19px)
+    margin-right: 20px
+  .tag
+    +Font(16px,#fff,400,19px)
+    font-style: italic
+    text-align: center
+    display: inline-block
+    padding: 2px 16px
+    background: $light-gray
+    border-radius: 100px
+.lt
+  +Font(16px,$dark-gray,400,19px)
+  float: left
+  &:after
+    clear: both
+.locate
+  margin-right: 20px
+.btns
+  float: right
+  transform: translateX(9px)
+  &:after
+    clear: both
+  .btn
+    color: $main-color
+    background-color: #FFF
+    border-color: #ECEEEF
+    padding: 10px 16px
+    &:hover
+      background-color: #ECEEEF 
+    &:active
+      background-color: $main-color
+      color: #FFF
+  .btn-now
+    background-color: $main-color
+    color: #FFF

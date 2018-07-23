@@ -1,0 +1,314 @@
+//#google charts
+@mixin font($size,$weight,$color)
+  font-family: 'HelveticaNeue'
+  font-size: $size
+  font-weight: $weight
+  color: $color
+@mixin board
+  background: #fff
+  box-shadow: 0 0 10px 5px #EBEBEB
+  border-radius: 3px
+  box-sizing: border-box
+*
+  padding: 0
+  margin: 0
+body
+  background: #F2F2F2
+.container
+  width: 100%
+  max-width: 940px
+  margin: 0 auto
+header
+  width: 100%
+  background-color: #000
+  text-align: center
+  .container
+    height: 70px
+    line-height: 70px
+  .logo
+    display: inline-block
+    width: 120px
+    +font(24px,bold,#fff)
+    float: left
+    padding-right: 65px
+  .menu
+    display: inline-block
+    float: left
+    height: 70px
+    a
+      display: inline-block
+      +font(16px,bold,#9B9B9B)
+      text-decoration: none
+      position: relative
+      padding: 0 20px
+      transition: all .3s
+      &:after
+        content: ""
+        display: inline-block
+        position: absolute
+        bottom: 0
+        left: 50%
+        width: 0%
+        height: 4px
+        background-color: #fff
+        transition: all .3s
+        transform: translateX(-50%)
+      &.active, &:hover
+        color: #fff
+        &:after
+          width: 100%      
+  .admin
+    display: inline-block
+    width: 60px
+    float: right
+    +font(16px,bold,#fff)
+.main
+  clear: both
+  width: 100%
+  text-align: center
+  .top
+    display: inline-block
+    width: 100%
+    height: 30px
+    line-height: 30px
+    margin: 30px 0 20px
+  .overview
+    display: inline-block
+    +font(24px,bold,#000)
+    float: left
+  .date
+    display: inline-block
+    float: right
+    > span
+      display: inline-block
+      text-align: right
+      +font(16px,normal,#9B9B9B)
+      padding-left: 8px
+    i
+      padding-left: 8px
+    .weekly
+      cursor: pointer
+      padding-left: 20px
+      position: relative
+      .li
+        width: 125px
+        height: 0
+        display: inline-block
+        position: absolute
+        right: -24px
+        background: #FFFFFF
+        box-shadow: 1px 2px 10px 0 #9B9B9B
+        border-radius: 2px
+        transition: .2s
+        > span
+          display: none
+          height: 35px
+          width: 100%
+          line-height: 35px
+          +font(16px,normal,#000)
+          text-align: center
+          &:hover
+            background: #000
+            color: #fff
+  .account
+    display: inline-block
+    width: 100%
+    margin-bottom: 18px
+    .revenue,.cost,.next
+      display: inline-block
+      float: left
+      width: calc((100% - 20px*2)/3)
+      padding: 30px 0 30px
+      +board
+      &:after
+        content: ""
+        clear: both
+      .title
+        +font(16px,normal,#000)
+        padding-bottom: 16px
+        i
+          padding-right: 8px
+          font-size: 24px
+      .number
+        display: inline-block
+        height: 43px
+        line-height: 43px
+        +font(36px,bold,#7ED321)
+    .cost
+      margin: 0 20px
+      .number
+        color: #D0021B
+    .next
+      .number
+        color: #4A90E2 
+  .activity
+    display: inline-block
+    width: 100%
+    height: 406px
+    +board
+    padding: 30px 40px
+    .title
+      display: inline-block
+      +font(24px,bold,#000)
+      float: left
+    .chart
+      display: inline-block
+      width: 100%
+      height: 100%
+  .n2
+    display: inline-block
+    width: 100%
+    margin-top: 20px
+    margin-bottom: 40px
+    .left,.right
+      display: inline-block
+      width: calc((100% - 26px)/2)
+      height: 456px
+      +board
+      padding: 30px 40px 0
+      text-align: left
+      +font(24px,bold,#000)
+    .left
+      margin-right: 20px
+      >.list
+        >.listcont
+          height: 100px
+    .list
+      display: inline-block
+      width: 100%
+    .listcont
+      + .listcont
+        border-top: 1px solid #EBEBEB
+      > span
+        line-height: 100px
+        display: inline-block
+        + span
+          margin-left: 20px
+      .icon
+        font-size: 45px
+        float: left
+      .address
+        +font(16px,normal,#9B9B9B)
+      .webnum
+        +font(20px,normal,#000)
+        float: right
+      .up,.down
+        float: right
+        text-align: right
+        position: relative
+        > i
+          margin-right: 8px
+          font-size: 20px
+          transform: translateY(1px)
+        > b
+          font-weight: normal
+          cursor: pointer
+          z-index: 2
+        > .different
+          position: absolute
+          padding: 20px 16px
+          background: #000
+          border-radius: 3px
+          width: 195px
+          box-sizing: border-box
+          z-index: 2
+          line-height: 1 !important
+          top: calc(100% - 70px)
+          left: calc(-5px + 50%)
+          transform: translate(-50%, -100%)
+          opacity: 0
+          transition: .2s
+          > .text
+            transition: .8s
+            display: block
+            +font(14px,normal,#fff)
+            text-align: center
+            width: 100%
+          .last
+            display: block
+            color: #9B9B9B
+            font-style: italic
+            width: 100%
+            text-align: center
+            margin-top: 8px
+          .high-light
+            +font(20px,bold,#fff)
+            margin: 0 4px
+          i
+            color: #000
+            position: absolute
+            top: 77px
+            left: 50%
+            transform: translateX(-50%)
+      .up
+        +font(16px,normal,#7ED321)
+        >.different
+          >.text
+            >.high-light
+              color: #7ED321
+      .down
+        +font(16px,normal,#D0021B)
+        >.different
+          >.text
+            > .high-light
+              color: #D0021B
+    .right
+      padding-bottom: 30px
+      transform: translateY(-7px)
+      >.list
+        margin-top: 25px
+        clear: both
+      .listcont
+        clear: both
+        box-sizing: border-box
+        padding: 9px 0 8px
+      .image
+        width: 100px
+        height: 100px
+        background: pink
+        float: left
+        img
+          width: 100%
+          height: 100%
+      .info
+        display: inline-block
+        height: 100px
+        margin-left: 20px
+        padding-top: 3px
+        box-sizing: border-box
+        > span
+          display: block
+          margin-top: 8px
+      .name
+        +font(20px,bold,#000)
+      .time,.person
+        +font(16px,normal,#9B9B9B)
+      .time
+        > i 
+          font-size: 10px
+          margin-right: 7px
+          color: #757575
+      .person
+        > i
+          font-size: 18px
+          margin-left: 3px
+          margin-right: 10px
+          color: #757575
+      .priceblock
+        float: right
+        margin-top: 45px
+        > span
+          display: block
+          text-align: right
+      .total
+        +font(14px,normal,#000)
+        margin-bottom: 5px
+      .price
+        +font(20px,bold,#000)
+          
+            
+            
+        
+            
+    
+     

@@ -1,0 +1,348 @@
+// #grid #flexbox
+.wrapper
+  margin: 32px auto
+  width: 100%
+  max-width: calc( 960px + 32px*2 )
+  padding: 0 32px
+  box-sizing: border-box
+// Mixin
+@mixin font($size,$weight,$style,$color)
+  font-family: "Roboto"
+  font-size: $size
+  font-weight: $weight //400,700,900
+  font-style: $style
+  color: $color
+@mixin go-flex($horizontal,$verticle)
+  display: flex
+  justify-content: $horizontal //橫向
+  align-items: $verticle //直向
+  &:after
+    content: ""
+    clear: both
+@mixin green-italic-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 10
+  &:after
+    content: ""
+    clear: both
+  
+// grid-container
+.grid-container
+  height: 2000px
+  width: 100%
+  display: grid
+  margin: 0 auto
+  box-sizing: border-box
+  grid-template-columns: repeat(8,12.5%)
+  grid-template-rows: repeat(20,5%)
+  
+// grid-item
+.home-title
+  grid-column: 3 / 7
+  grid-row: 1 / 2
+  flex-direction: column
+  +go-flex(space-between,center)
+  > .logo
+    width: 131px
+    height: 27px
+    line-height: 27px
+    background: #000
+    text-align: center
+    +font(20px,900,normal,#fff)
+    margin-bottom: 7px
+  > .home-text
+    +font(72px,900,normal,#000)
+.green1
+  grid-column: 3 / span 3
+  grid-row: 2 / span 3
+  +go-flex(center,center)
+.green2
+  grid-column: 7 / span 2
+  grid-row: 3 / span 2
+  width: 100% !important
+  height: 100% !important
+.green3
+  grid-column: 6 / span 3
+  grid-row: 3 / span 3
+  +go-flex(center,center)
+.green4
+  grid-column: 6 / span 3
+  grid-row: 8 / span 2
+  +go-flex(center,center)
+  > .border-green
+    height: 100% !important
+.green5
+  grid-column: 1 / span 2
+  grid-row: 8 / span 3
+  +go-flex(center,center)
+  > .box-green
+    width: 100% !important
+.green6
+  grid-column: 3 / span 3
+  grid-row: 9 / span 3
+  +go-flex(center,center)
+.green7
+  grid-column: 2 / span 2
+  grid-row: 14 / span 2
+  +go-flex(center,center)
+  > .border-green
+    width: 100% !important
+    height: 50% !important
+.green8
+  grid-column: 1 / span 3
+  grid-row: 16 / span 5
+  +go-flex(center,center)
+  > .border-green
+    height: 80% !important
+.green9
+  grid-column: 4 / span 3
+  grid-row: 17 / span 2
+  +go-flex(center,center)
+  > .box-green
+    height: 100% !important
+.green10
+  grid-column: 5 / span 4
+  grid-row: 17 / span 3
+  +go-flex(center,center)
+  > .border-green
+    width: 100% !important
+.green11
+  grid-column: 2 / span 2
+  grid-row: 19 / span 2
+  +go-flex(center,center)
+  width: 100% !important
+  height: 100% !important
+// --photo01--
+.photo1
+  grid-column: 1 / span 4
+  grid-row: 3 / span 4
+  position: relative
+  background: url("https://images.unsplash.com/photo-1513827379601-9dba5099a3f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1acdd78f34ee75aade9e313251bb1695&auto=format&fit=crop&w=2468&q=80") center center no-repeat
+  background-size: cover
+  > .item-title
+    margin-top: -18px
+    &:before
+      content: "LINEN BLAZER"
+      left: 1px
+    &:after
+      content: "LINEN BLAZER"
+      left: 1px
+  > .sub-title
+    transform: rotate(-270deg)
+    top: 350px
+    right: -76px
+.number1
+  grid-column: 1 / span 1
+  grid-row: 7 / span 1
+  +go-flex(flex-start,flex-start)
+.italic-line1
+  grid-column: 1 / span 3
+  grid-row: 6 / span 2
+  +green-italic-flex
+// --photo02--
+.photo2
+  grid-column: 6 / span 2
+  grid-row: 4 / span 2
+  background: url("https://images.unsplash.com/photo-1514632542677-48fae74a01b2?ixlib=rb-0.3.5&s=50945fdb784e64361154c62785542531&auto=format&fit=crop&w=2468&q=80") center center no-repeat
+  background-size: cover
+  position: relative
+  > .sub-title
+    top: -28px
+    left: -14px
+.title2
+  grid-column: 7 / span 2
+  grid-row: 6 / span 1
+  +go-flex(flex-start,center)
+  > .item-title
+    margin-top: -30px
+    &:before
+      content: "FREELIFT"
+    &:after
+      content: "FREELIFT"
+.number2
+  grid-column: 8 / span 1
+  grid-row: 3 / span 1
+  +go-flex(flex-end,flex-start)
+// --photo03--
+.photo3
+  grid-column: 1 / span 4
+  grid-row: 9 / span 2
+  background: url("https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0f994eef47e5fb1a67849703cc961b3&auto=format&fit=crop&w=2550&q=80") center center no-repeat
+  background-size: cover
+.title3
+  grid-column: 2 / span 3
+  grid-row: 8 / span 1
+  +go-flex(flex-end,flex-end)
+  > .item-title
+    top: 12px
+    &:before
+      content: "SUPER SKINNY"
+    &:after
+      content: "SUPER SKINNY"
+.sub3
+  grid-column: 1 / span 2
+  grid-row: 11 / span 2
+  +go-flex(flex-end,flex-start)
+.number3
+  grid-column: 5 / span 1
+  grid-row: 11 / span 1
+  +go-flex(flex-start,flex-start)
+// --photo4--
+.photo4
+  grid-column: 7 / span 2
+  grid-row: 9 / span 4
+  overflow: hidden
+  background: url("https://images.unsplash.com/photo-1484516758160-69878111a911?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39466d66952b133d5a5cff642b970d05&auto=format&fit=crop&w=2574&q=80") center center no-repeat
+  background-size: cover
+.title4
+  grid-column: 6 / span 1
+  grid-row: 9 / span 2
+  +go-flex(flex-end,flex-start)
+  > .item-title 
+    transform: rotate(-90deg) translate(-48px, 50px)
+    &:before
+      content: "DENIM"
+    &:after
+      content: "DENIM"
+.sub4
+  grid-column: 8 / span 1
+  grid-row: 7 / span 2
+  +go-flex(flex-end,center)
+  > .sub-title
+    transform: rotate(90deg) translate( 27px , -11px)
+.number4
+  grid-column: 6 / span 1
+  grid-row: 12 / span 1
+  +go-flex(flex-end,flex-end) 
+.italic-line4
+  grid-column: 7 / span 2
+  grid-row: 12 / span 2
+  +green-italic-flex
+// --photo5--
+.photo5
+  grid-column: 3 / span 2
+  grid-row: 13 / span 2
+  overflow: hidden
+  background: url("https://images.unsplash.com/photo-1525448198276-222de3961638?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=43fb25556cdbd191e520c7f28739e40d&auto=format&fit=crop&w=2550&q=80") center center no-repeat
+  background-size: cover
+  transform: rotateY(-180deg)
+.title5
+  grid-column: 1 / span 3
+  grid-row: 13 / span 1
+  +go-flex(flex-start,flex-end)
+  z-index: 20
+  > .item-title
+    &:before
+      content: "SWEATSHIRTS"
+    &:after
+      content: "SWEATSHIRTS"
+.sub5
+  grid-column: 5 / span 2
+  grid-row: 13 / span 1
+  +go-flex(flex-start,flex-start)
+.number5
+  grid-column: 2 / span 1
+  grid-row: 14 / span 1
+  +go-flex(flex-start,flex-end) 
+.italic-line5
+  grid-column: 1 / span 3
+  grid-row: 12 / span 2
+  +green-italic-flex
+// --photo6--
+.photo6
+  grid-column: 5 / span 4
+  grid-row: 15 / span 4
+  overflow: hidden
+  background: url("https://images.unsplash.com/photo-1519406709381-c1f293304b28?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98c497a29f229085d9574ee8b6eeef8c&auto=format&fit=crop&w=2468&q=80") center center no-repeat
+  background-size: cover
+.title6
+  grid-column: 6 / span 3
+  grid-row: 14 / span 1
+  +go-flex(flex-start,flex-end)
+  z-index: 20
+  > .item-title
+    top: 12px
+    &:before
+      content: "VINTAGE DENIM"
+    &:after
+      content: "VINTAGE DENIM"
+.sub6
+  grid-column: 6 / span 2
+  grid-row: 19 / span 1
+  +go-flex(center,flex-start)
+.number6
+  grid-column: 4 / span 1
+  grid-row: 16 / span 1
+  +go-flex(flex-end,flex-end) 
+// --photo7--
+.photo7
+  grid-column: 1 / span 2
+  grid-row: 17 / span 4
+  overflow: hidden
+  background: url("https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63ff45d79414b3166b08b800a32018be&auto=format&fit=crop&w=2468&q=80") center center no-repeat
+  background-size: cover
+.title7
+  grid-column: 3 / span 1
+  grid-row: 17 / span 2
+  +go-flex(flex-start,flex-start)
+  z-index: 20
+  > .item-title
+    transform: rotate(90deg) translate(64px, 67px)
+    &:before
+      content: "EDITION"
+    &:after
+      content: "EDITION"
+.sub7
+  grid-column: 1 / span 2
+  grid-row: 16 / span 1
+  +go-flex(flex-start,flex-end)
+.number7
+  grid-column: 3 / span 1
+  grid-row: 20 / span 1
+  +go-flex(flex-end,flex-end) 
+
+
+//--------------------------  
+.border-green
+  width: 66.6%
+  height: 66.6%
+  border: 20px solid #50E3C2
+  box-sizing: border-box
+.box-green
+  width: 66.6%
+  height: 66.6%
+  background: #50E3C2
+.item-title
+  +font(48px,900,normal,#000)
+  position: relative
+  &:before
+    +font(48px,900,normal,#000)
+    opacity: .3
+    display: block
+    position: absolute
+    height: 33px
+    top: -17px
+    overflow: hidden
+  &:after
+    +font(48px,900,normal,#000)
+    opacity: .1
+    display: block
+    position: absolute
+    height: 24px
+    top: -25px
+    overflow: hidden
+.sub-title
+  +font(24px,700,italic,#000)
+  height: 28px
+  line-height: 28px
+  position: absolute
+.number
+  +font(48px,900,normal,#000)
+  height: 48px
+  line-height: 48px
+.italic
+  width: 240px
+  height: 100px
+  background: url("https://hexschool.github.io/THE_F2E_Design/week4-product%20gallery/assets/pattern%20unit.png") left top repeat

@@ -1,0 +1,136 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.wrapper {
+  width: 45%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.top {
+  width: 100%;
+  height: 8px;
+  background: #0275D8;
+}
+
+.steps {
+  width: 45%;
+  height: 2px;
+  background-color: #BEE1FF;
+  margin: 50px auto;
+  padding: 0;
+}
+
+.steps .dot {
+  float: left;
+  margin-right: calc( (100% - 16px*4) / 3);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #BEE1FF;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transform: translateY(-7px);
+  -ms-transform: translateY(-7px);
+  transform: translateY(-7px);
+}
+
+.steps .dot:first-child {
+  border-color: #0275D8;
+}
+
+.steps .dot:first-child:after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #0275D8;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.steps .dot:last-child {
+  margin-right: 0;
+}
+
+h1 {
+  font-family: "Roboto",sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Roboto",sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+}
+
+.cont {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.cont .title {
+  font-family: "Roboto",sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  display: block;
+}
+
+.cont input {
+  font-family: "Roboto",sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  display: block;
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.submit {
+  font-family: "Roboto",sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  background: #BEE1FF;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 40px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.submit:hover {
+  background: #0275D8;
+}

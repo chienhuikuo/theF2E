@@ -1,0 +1,164 @@
+$main-color: #4A90E2
+$sub-color: #00408B
+$Taskbg-main-color: #FFF2DC
+$font-family: Roboto
+@mixin RegularText($Tcolor:#000,$size:24px)
+  font-family: $font-family
+  font-weight: 400
+  font-style: normal
+  font-size: $size
+  color: $Tcolor
+@mixin MediumText($Tcolor:#000,$size:24px)
+  font-family: $font-family
+  font-weight: 500
+  font-style: normal
+  font-size: $size
+  color: $Tcolor
+@mixin ItalicText
+  font-family: $font-family
+  font-weight: 400
+  font-style: Italic
+  font-size: 24px
+  color: #C8C8C8
+@mixin BlockSize($width,$height)
+  width: $width
+  height: $height
+@mixin SelectMenuText
+  border-bottom: 5px solid $sub-color
+  margin-bottom: -5px
+  +MediumText(#fff,24px)
+  
+body
+  background: #E1E1E1
+.wrap
+  margin: 0 auto
+.head
+  position: relative
+  top: 0 
+  +BlockSize(100%,76px)
+  background: #4a90e2
+  text-align: center
+  ul
+    position: relative
+    margin: 0 auto
+    display: inline-block
+    padding: 0
+    li
+      display: inline-block
+      float: left
+      width: 220px
+      box-sizing: border-box
+      line-height: 76px
+      a
+        text-decoration: none
+        display: inline-block
+        +BlockSize(160px,71px)
+        +RegularText($sub-color)
+        &:hover
+          +SelectMenuText
+      .aclick
+        +SelectMenuText
+.main
+  position: relative
+  margin: 0 auto
+  width: 100%
+  +BlockSize(620px,auto)
+.add
+  position: relative
+  margin: 24px auto
+  +BlockSize(620px,65px)
+  background: #fff
+  box-sizing: border-box
+  line-height: 32.5px
+  border: 2px solid #C8C8C8
+  border-radius: 5px
+  padding: 0 67px
+  h1
+    +RegularText(#C8C8C8,24px)
+    &:before
+      content: ''
+      display: inline-block
+      +BlockSize(0px,20px)
+      border: 1px solid #C8C8C8
+      position: absolute
+      left: 43px
+      top: 20px
+    &:after
+      content: ''
+      display: inline-block
+      +BlockSize(20px,0px)
+      border: 1px solid #C8C8C8
+      position: absolute
+      left: 33px
+      top: 30px
+.task_block
+  position: relative
+  margin: 24px auto
+  +BlockSize(620px,auto)
+  background: $Taskbg-main-color
+  box-sizing: border-box
+  line-height: 28px
+  border-radius: 5px
+  padding: 24px 32px 24px
+  +MediumText
+.check
+  display: inline-block
+  +BlockSize(24px,24px)
+  background-color: #fff
+  border-radius: 2px
+  margin-right: 16px
+  cursor: pointer
+.fa-pencil-alt
+  float: right
+  margin-left: 32px
+  cursor: pointer
+.solid-star
+  color: #F5A623
+  float: right
+  cursor: pointer
+.border-star
+  color: #F5A623
+  float: right
+  cursor: pointer
+.icons
+  +RegularText(#757575,16px)
+  position: relative
+  left: 72px-32px
+  i
+    margin: 17px 16px 0 0
+    span
+      margin-left: 8px
+/* Commet Done */
+.checked_task_block
+  background: #F2F2F2
+.checked
+  background-color: $main-color
+  &:after
+    position: absolute
+    content: "✓"
+    color: #fff
+    font-size: 18px
+    left: 38px
+.checked+span
+  color: #9B9B9B
+  text-decoration: line-through
+h2
+  +ItalicText
+  line-height: 28px
+  padding-left: 32px
+    
+      
+      
+    
+    
+      
+        
+    
+      
+      
+      
+      
+     
+    
+     
+  

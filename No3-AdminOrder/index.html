@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<title>F2E No3. Admin Order</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">Shoptime</div>
+    <div class="menu">
+      <a href="#" class="active">HOME</a>
+      <a href="#">ORDERS</a>
+      <a href="#">PRODUCT</a>
+    </div>
+    <div class="admin">ADMIN</div>
+  </div>
+</header>
+<div class="main">
+  <div class="container">
+    <div class="top">
+      <div class="overview">OVERVIEW</div>
+      <div class="date">
+        <span>2018/06/06</span>
+        <i class="fas fa-caret-right"></i>
+        <span>2018/06/13</span>
+        <span class="weekly">Weekly
+          <div class="li">
+            <span>Daily</span>
+            <span>Weekly</span>
+            <span>Monthly</span>
+            <span>Yearly</span>
+            <span>Custom</span>
+          </div>
+        </span>
+        <i class="fas fa-caret-down"></i>
+      </div>
+    </div>
+    <div class="account">
+      <div class="revenue">
+        <div class="title"><i class="fas fa-hand-holding-usd"></i>TOTAL REVENUE</div>
+        <div class="number">54,540</div>
+      </div>
+      <div class="cost">
+        <div class="title"><i class="fas fa-boxes"></i>TOTAL COST</div>
+        <div class="number">12,660</div>
+      </div>
+      <div class="next">
+        <div class="title"><i class="fas fa-money-bill"></i>NET INCOME</div>
+        <div class="number">41,880</div>
+      </div>
+    </div>
+    <div class="activity">
+      <div class="title">ACTIVITY</div>
+      <div id="chart" class="chart"></div>
+    </div>
+    <span class="n2">
+      <div class="left">Transaction Website
+        <div class="list">
+          <div class="listcont">
+            <span class="icon"><i class="fab fa-facebook"></i></span>
+            <span class="address">Facebook.com</span>
+            <span class="up"><i class="fas fa-angle-double-up"></i><b>20%</b>
+              <div class="different">
+                <div class="text">INCREASE<span class="high-light">899</span>VIEWS</div>
+                <div class="last">last week: 44,937</div>
+                <i class="fas fa-caret-down"></i>
+              </div>
+            </span>
+            <span class="webnum">45,836</span>
+          </div>
+          <div class="listcont">
+            <span class="icon"><i class="fab fa-google"></i></span>
+            <span class="address">google.com</span>
+            <span class="up"><i class="fas fa-angle-double-up"></i><b>12%</b>
+              <div class="different">
+                <div class="text">INCREASE<span class="high-light">899</span>VIEWS</div>
+                <div class="last">last week: 44,937</div>
+                <i class="fas fa-caret-down"></i>
+              </div>
+            </span>
+            <span class="webnum">23,582</span>
+          </div>
+          <div class="listcont">
+            <span class="icon"><i class="fab fa-spotify"></i></span>
+            <span class="address">Shopify.com</span>
+            <span class="down"><i class="fas fa-angle-double-down"></i><b>15%</b>
+              <div class="different">
+                <div class="text">INCREASE<span class="high-light">899</span>VIEWS</div>
+                <div class="last">last week: 44,937</div>
+                <i class="fas fa-caret-down"></i>
+              </div>
+            </span>
+            <span class="webnum">2,489</span>
+          </div>
+          <div class="listcont">
+            <span class="icon"><i class="fab fa-wordpress"></i></span>
+            <span class="address">Wordpress.com</span>
+            <span class="down"><i class="fas fa-angle-double-down"></i><b>30%</b>
+              <div class="different">
+                <div class="text">INCREASE<span class="high-light">899</span>VIEWS</div>
+                <div class="last">last week: 44,937</div>
+                <i class="fas fa-caret-down"></i>
+              </div>
+            </span>
+            <span class="webnum">1,057</span>
+          </div>
+        </div>
+      
+      </div>
+      <div class="right">Latest Orders
+        <div class="list">
+          <div class="listcont">
+            <div class="image"><img src="http://www.caco2.url.tw/caco/CACO1/PD/ODC018_1200_5.jpg" alt=""></div>
+            <div class="info">
+              <span class="name">Vintage T-shirt</span>
+              <span class="time"><i class="fas fa-clock"></i>2018/6/13  13:42</span>
+              <span class="person"><i class="fas fa-male"></i>Belle Willis</span>
+            </div>
+            <div class="priceblock">
+              <span class="total">Total</span>
+              <span class="price">3,200</span>
+            </div>
+          </div>
+          <div class="listcont">
+            <div class="image"><img src="http://www.caco.url.tw/caco/PD/KAR016_1200_10.jpg" alt=""></div>
+            <div class="info">
+              <span class="name">Cowboy Jacket</span>
+              <span class="time"><i class="fas fa-clock"></i>2018/6/13  10:45</span>
+              <span class="person"><i class="fas fa-male"></i>Adrian Cummings</span>
+            </div>
+            <div class="priceblock">
+              <span class="total">Total</span>
+              <span class="price">2,800</span>
+            </div>
+          </div>
+          <div class="listcont">
+            <div class="image"><img src="http://www.caco4.url.tw/caco/CACO1/PD/PNC027_1200_10.jpg" alt=""></div>
+            <div class="info">
+              <span class="name">Coach Coat</span>
+              <span class="time"><i class="fas fa-clock"></i>2018/6/13  8:26</span>
+              <span class="person"><i class="fas fa-male"></i>Lura Holland</span>
+            </div>
+            <div class="priceblock">
+              <span class="total">Total</span>
+              <span class="price">1,600</span>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+	
+</body>
+<script type="text/javascript">
+	// LineChart
+	google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Revenue', 'Cost', 'Income'],
+          ['6 JUNE',  7300,    600,    6100],
+          ['7 JUNE',  7000,    600,    5400],
+          ['8 JUNE',  5500,    3700,   1900],
+          ['9 JUNE',  8800,    3000,   4000],
+          ['10 JUNE', 5900,    2400,   3800],
+          ['11 JUNE', 6200,    500,    5300],
+          ['12 JUNE', 8000,    900,    6500],
+          ['13 JUNE', 7300,    2000,   4900]
+        ]);
+
+        var options = {
+          legend: 'none',
+          series: {
+            0: { color: '#7ED321' },
+            1: { color: '#D0021B' },
+            2: { color: '#4A90E2' },
+            },
+          animation:{
+            duration: 1000,
+            easing: 'out'
+          }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart'));
+
+        chart.draw(data, options);
+        
+      }
+
+	// Weekly
+	$('.weekly').click(function(){
+	  var open = {
+	      height: "175px"
+	    };
+	  
+	  $('.li').css(open);
+	  $('.li').children().css("display","block")
+	})
+	$('.weekly').mouseleave(function() {
+	  var close = {
+	      height: "0"
+	    }; 
+	  
+	  $('.li').css(close);
+	  $('.li').children().css("display","none")
+	});
+
+	//Website different
+
+	$( 'b' ).hover(
+	  function() {
+	    $(this).siblings('.different').css('opacity','1');
+	  }, function() {
+	    $(this).siblings('.different').css('opacity','0');
+	  }
+	);
+
+
+
+</script>
+</html>
