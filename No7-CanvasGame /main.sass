@@ -1,0 +1,58 @@
+@mixin font($size,$weight)
+	color: #fff
+	font-size: $size
+	font-weight: $weight
+	font-family: "Roboto","微軟正黑體","Helvetica",sans-serif
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	position: relative
+html,body
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	background: #a8bbc3
+#mycanvas
+	background: #001D2E
+	box-shadow: 0 0 7px 2px #000406
+.wrapper
+	position: absolute
+	width: 800px
+	height: 500px
+.title
+	+font(25px,300)
+	display: block
+	text-align: center
+	position: absolute
+	top: 49%
+	left: 50%
+	transform: translate(-50%,-50%)
+	z-index: 5
+.start
+	display: block
+	width: 120px
+	border: 2px solid #fff
+	border-radius: 40px
+	line-height: 32px
+	+font(16px,300)
+	text-align: center
+	position: absolute
+	top: 62%
+	left: 50%
+	transform: translate(-50%,-50%)
+	transition: background .5s
+	cursor: pointer
+	z-index: 5
+	&:hover
+		background: #a7da2d
+		border: none
+
+.discribe
+	line-height: 20px
+	+font(14px,100)
+	padding: 20px
+	position: absolute
+	bottom: 0
+	z-index: 5
