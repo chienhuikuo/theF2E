@@ -1,0 +1,144 @@
+$light-blue: #1469FF
+$dark-blue: #0027C8
+$pink: #FF3C82
+
+@mixin align-center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+@mixin pink-star-triangle
+  content: ''
+  display: inline-block
+  border-left: 185px solid transparent
+  border-right: 185px solid transparent
+  position: absolute
+@mixin font($size,$weight,$color,$lheight)
+  font-size: $size
+  font-weight: $weight
+  color: $color
+  line-height: $lheight
+
+*
+  margin: 0
+  padding: 0
+  position: relative
+  box-sizing: border-box
+  font-family: "Roboto","微軟正黑體",Helvetica,Arial,sans-serif
+.hidden
+  overflow: hidden
+html,body
+  width: 100%
+  height: 100%
+.opening
+  width: 100vw
+  height: 100vh
+  background: $light-blue
+  .star
+    +align-center
+    &:before
+      +pink-star-triangle
+      border-bottom: 310px solid $pink
+      transform: translate(-50%, calc( -50% - 30px ))
+    &:after
+      +pink-star-triangle
+      border-top: 310px solid $pink
+      transform: translate(-50%, calc( -50% + 30px ))
+  .circle
+    width: 535px
+    height: 535px
+    border-radius: 50%
+    background: $dark-blue
+    +align-center
+  .square
+    width: 435px
+    height: 435px
+    background: black
+    +align-center
+  .text-block
+    +align-center
+    text-align: center
+    color: #fff
+    .text-block_title
+      font-size: 64px
+      font-weight: 700
+    .text-block_desc
+      font-size: 24px
+      font-weight: 400
+.Questions
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  width: 100%
+  height: auto
+  overflow: hidden
+  background: $light-blue
+  .Q-wrapper
+    opacity: 0
+    width: 60%
+    padding-top: 85px
+    padding-bottom: 77px
+    .Q-section
+      width: 380px
+      margin: 0 auto
+      .Q1
+        +font(64px,700,$pink,75px)
+      .Q-title
+        +font(36px,700,#fff,48px)
+        margin-top: 10px
+        margin-bottom: 16px
+      .Q-desc
+        +font(24px,400,$dark-blue,36px)
+        margin-bottom: 40px
+      .A
+        width: 380px
+        border: 2px solid #fff
+        border-radius: 30.5px
+        padding: 10px 0
+        +font(20px,400,#fff,36px)
+        text-align: center
+        margin-bottom: 16px
+        cursor: pointer
+        &:hover, &:active
+          background: #fff
+          color: $light-blue
+  .shape
+    width: 40%
+    height: 100%
+    position: absolute
+    right: -40%
+    //right: 0
+    top: 0
+    background: $dark-blue
+    overflow: hidden
+    .square
+      width: 15vw  
+      height: 15vw
+      background: $pink
+      top: 100%
+      //top: 15%
+      left: 20%
+    .triangle
+      border-bottom: 9vw solid #fff
+      border-left: 5vw solid transparent
+      border-right: 5vw solid transparent
+      width: 0
+      top: 100%
+      //top: 22%
+      left: 78%
+    .circle
+      width: 32vw
+      height: 32vw
+      border-radius: 50%
+      background: #000
+      top: 100%
+      //top: 30%
+      left: 25%
+
+      
+
+  .Quetion2, .Quetion3   
+    display: none
+
+
