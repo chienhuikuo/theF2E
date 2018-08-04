@@ -1,0 +1,121 @@
+@charset "UTF-8";
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#301A3B), to(#10030A)) no-repeat;
+  background: linear-gradient(0, #301A3B, #10030A) no-repeat;
+  background-size: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 185vh;
+}
+
+.moon {
+  width: 17%;
+  position: absolute;
+  left: 8%;
+  top: -5%;
+}
+
+.moon img {
+  width: 100%;
+}
+
+.title {
+  margin: 90px auto;
+  font-family: "Yuanti TC",'微軟正黑體',Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 79px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 3px 7px #0093FF;
+  letter-spacing: 12px;
+}
+
+.title:after {
+  content: 'UI Designer Road Map';
+  display: block;
+  text-align: center;
+  font-size: 69px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 3px 7px #0093FF;
+  font-family: 'Silom','微軟正黑體',Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+
+.skill-block {
+  margin-top: 100px;
+  margin-left: 7%;
+}
+
+.data {
+  display: inline-block;
+  float: right;
+  font-family: 'Noto Sans CJK TC','微軟正黑體',Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  line-height: 52px;
+  font-weight: bold;
+  color: #505050;
+  opacity: 0.71;
+  margin-top: 40px;
+}
+
+.data:after {
+  content: '';
+  clear: both;
+}
+
+.dialog-cat {
+  position: absolute;
+  background: url("../assets/img_monocat@2x.png") left top no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 450px;
+  left: -220px;
+  top: -70px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45vw;
+  background: url("../assets/img_footer@2x.png") no-repeat;
+  background-size: 100%;
+}
+
+.footer .footer-cat {
+  width: 20vw;
+  position: absolute;
+  top: 40%;
+  left: 6%;
+}
+
+.footer .footer-cat img {
+  width: 100%;
+}
+
+.footer .footer-rocket {
+  width: 13vw;
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  z-index: -1;
+}
+
+.footer .footer-rocket img {
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

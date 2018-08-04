@@ -1,0 +1,86 @@
+*
+  position: relative
+  margin: 0
+  padding: 0
+html
+  width: 100%
+body
+  width: 100%
+  background: linear-gradient(0,#301A3B,#10030A) no-repeat 
+  background-size: 100%
+@mixin font($size)
+  text-align: center
+  font-size: $size
+  color: white
+  font-weight: bold
+  text-shadow:  0 3px 7px #0093FF
+  
+.wrapper
+  width: 100%
+  height: 185vh
+.moon
+  width: 17%
+  position: absolute
+  left: 8%
+  top: -5%
+  img
+    width: 100%
+.title
+  margin: 90px auto
+  font-family: "Yuanti TC",'微軟正黑體',Arial, Helvetica, sans-serif
+  +font(79px)
+  letter-spacing: 12px
+  &:after
+    content: 'UI Designer Road Map'
+    display: block
+    +font(69px)
+    font-family: 'Silom','微軟正黑體',Arial, Helvetica, sans-serif
+    letter-spacing: 1px
+.skill-block
+  margin-top: 100px
+  margin-left: 7%
+.data
+  display: inline-block
+  float: right
+  font-family: 'Noto Sans CJK TC','微軟正黑體',Arial, Helvetica, sans-serif
+  font-size: 35px
+  line-height: 52px
+  font-weight: bold
+  color: #505050
+  opacity: 0.71
+  margin-top: 40px
+  &:after
+    content: ''
+    clear: both
+.dialog-cat
+  position: absolute
+  background: url('../assets/img_monocat@2x.png') left top no-repeat
+  background-size: cover
+  width: 300px
+  height: 450px
+  left: -220px
+  top: -70px
+.footer
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 45vw
+  background: url('../assets/img_footer@2x.png') no-repeat
+  background-size: 100%
+  .footer-cat
+    width: 20vw
+    position: absolute
+    top: 40%
+    left: 6%
+    img
+      width: 100%
+  .footer-rocket
+    width: 13vw
+    position: absolute
+    bottom: 0
+    right: 15%
+    z-index: -1
+    img
+      width: 100%
+  
+
