@@ -59,7 +59,7 @@ class SkillTree extends Component {
       const selectedSkills = Object.keys(this.state).filter(
         key => this.state[key] === 'selected'
       )
-      this.props.history.replace(`/?k=${selectedSkills.join(',')}`)
+      this.props.history.replace(`/F2E-week9/?k=${selectedSkills.join(',')}`)
     }
   }
   render() {

@@ -18,14 +18,14 @@ body {
 
 .wrapper {
   width: 100%;
-  height: 185vh;
+  height: 1500px;
 }
 
 .moon {
   width: 17%;
   position: absolute;
-  left: 8%;
-  top: -5%;
+  left: -2%;
+  top: 37%;
 }
 
 .moon img {
@@ -33,7 +33,9 @@ body {
 }
 
 .title {
-  margin: 90px auto;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  margin: 60px auto;
   font-family: "Yuanti TC",'微軟正黑體',Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 79px;
@@ -58,18 +60,48 @@ body {
 .skill-block {
   margin-top: 100px;
   margin-left: 7%;
+  left: -6%;
+  z-index: 3;
+}
+
+.skillbuttonbg {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 147, 255, 0.35);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 147, 255, 0.44);
+          box-shadow: 0 3px 6px rgba(0, 147, 255, 0.44);
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+.skillbuttonbg .skillimg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.3);
+          transform: translate(-50%, -50%) scale(0.3);
+  -webkit-transition: 0.3s cubic-bezier(0.55, 2.35, 0.71, 0.41);
+  transition: 0.3s cubic-bezier(0.55, 2.35, 0.71, 0.41);
+}
+
+.skillbuttonbg .skillimg:hover {
+  -webkit-transform: translate(-50%, -50%) scale(0.4);
+          transform: translate(-50%, -50%) scale(0.4);
 }
 
 .data {
   display: inline-block;
   float: right;
   font-family: 'Noto Sans CJK TC','微軟正黑體',Arial, Helvetica, sans-serif;
-  font-size: 35px;
-  line-height: 52px;
+  font-size: 24px;
+  line-height: 38px;
   font-weight: bold;
   color: #505050;
-  opacity: 0.71;
   margin-top: 40px;
+  opacity: 0.71;
 }
 
 .data:after {
@@ -77,14 +109,43 @@ body {
   clear: both;
 }
 
+.dialog-block {
+  width: 50vw;
+  height: auto;
+  background: #fff;
+  border: 10px solid rgba(0, 147, 255, 0.76);
+  border-radius: 65px;
+  padding: 0 80px 36px 90px;
+  top: 400px;
+  left: 15%;
+}
+
 .dialog-cat {
   position: absolute;
   background: url("../assets/img_monocat@2x.png") left top no-repeat;
   background-size: cover;
-  width: 300px;
-  height: 450px;
-  left: -220px;
+  width: 200px;
+  height: 300px;
+  left: -150px;
   top: -70px;
+}
+
+.dialog-label {
+  font-family: 'Noto Sans CJK TC','微軟正黑體',Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: bold;
+  color: #505050;
+  margin-top: 40px;
+}
+
+.dialog-content {
+  font-family: 'Noto Sans CJK TC','微軟正黑體',Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: normal;
+  color: #7B7B7B;
+  margin-top: 4px;
 }
 
 .footer {
