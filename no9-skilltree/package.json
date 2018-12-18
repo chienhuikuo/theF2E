@@ -2,7 +2,7 @@
   "name": "no9-skilltree",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://chienhuikuo.github.io/F2E-week9",
+  "homepage": "https://chienhuikuo.github.io/theF2E/no9-skilltree",
   "dependencies": {
     "ajv": "^6.5.2",
     "gh-pages": "^1.2.0",
