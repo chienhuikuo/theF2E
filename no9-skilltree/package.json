@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://chienhuikuo.github.io/theF2E/no9-skilltree",
   "dependencies": {
-    "ajv": "^6.5.2",
+    "ajv": "^6.12.3",
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
